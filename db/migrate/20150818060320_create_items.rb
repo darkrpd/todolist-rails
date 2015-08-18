@@ -1,9 +1,10 @@
-class CreateCategories < ActiveRecord::Migration
+class CreateItems < ActiveRecord::Migration
   def change
-    create_table :categories do |t|
-      t.string :name
+    create_table :items do |t|
+      t.text :content
       t.integer :user_id
       t.integer :category_id
+
       t.timestamps null: false
     end
   end
