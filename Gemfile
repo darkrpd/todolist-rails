@@ -3,7 +3,8 @@ source 'https://rubygems.org'
   gem 'devise'
   gem 'friendly_id', '~> 5.1.0'
   gem 'rails_admin'
-
+  gem 'cancancan', '~> 1.10'
+  #gem "active_model_serializers", "~> 0.8.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record
@@ -45,5 +46,5 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+#  gem 'spring'
 end

@@ -13,8 +13,10 @@
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
 
-<%= link_to "New Post", new_category_item_path(@category) %>
-
+<% if can? :create, @category %>
+  <%= link_to "New Post", new_topic_post_path(@category) %>
+<% end %>
+ </br>
 <h1>Listing Items</h1>
 
 <table>
