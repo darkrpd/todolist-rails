@@ -5,4 +5,9 @@ class Category < ActiveRecord::Base
 
   belongs_to :user
   has_many :items
+
+  def active_model_serializer
+    TopicSerializer #############topic ==== category olacak....
+  end
+
 end

@@ -7,12 +7,23 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     @categories = Category.all #@categories = Category.all.page(params[:])
+
+    respond_to do |format|
+        format.json {render :json => @categories}
+        format.html
+      end
+
+
   end
 
   # GET /categories/1
   # GET /categories/1.json
   def show
     @items = @category.items
+    respond_to do |format|
+        format.json {render :json => @items}
+        format.html
+      end
   end
 
   # GET /categories/new
